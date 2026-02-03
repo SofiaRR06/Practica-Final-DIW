@@ -16,13 +16,11 @@ const Methodologies: React.FC = () => {
         </div>
 
         {/* Líneas centrales */}
-        <div className="flex-1 space-y-4">
-          <div className="h-2 bg-black rounded-full"></div>
-          <div className="h-2 bg-black rounded-full"></div>
-          <div className="h-2 bg-black rounded-full"></div>
-          <div className="h-2 bg-black rounded-full"></div>
-          <div className="h-2 bg-black rounded-full"></div>
-          <div className="h-2 bg-black rounded-full"></div>
+        <div className="flex-1 space-y-4 text-blue text-justify text-lg">
+          En nuestra empresa de publicidad aplicamos metodologías ágiles como Kanban y Scrum para gestionar proyectos
+          de manera eficiente. <br />Kanban nos ayuda a visualizar el flujo de trabajo y priorizar tareas, mientras que Scrum
+          organiza proyectos complejos en sprints, fomentando la colaboración y la entrega rápida de resultados. <br/>
+          Así conseguimos creatividad, agilidad y campañas de calidad para nuestros clientes.
         </div>
 
         {/* Cuadro derecho */}
