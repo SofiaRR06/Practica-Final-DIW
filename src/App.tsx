@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Methodologies from './components/Methodologies'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import Testimonials from './components/Testimonials'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Header />
     <Projects />
     <Methodologies />
+    <Testimonials />
     </>
   )
 }
