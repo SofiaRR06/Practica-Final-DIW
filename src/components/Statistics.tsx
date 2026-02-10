@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import StatCard from './StatCard';
 import type { Stat } from './StatCard';
+import estadistica1 from '../assets/estadisticas1.png';
+import estadistica2 from '../assets/estadisticas2.png';
+import estadistica3 from '../assets/estadisticas3.jpeg';
+import estadistica4 from '../assets/estadisticas4.jpeg';
 
 interface StatisticsProps {
   stats?: Stat[];
@@ -12,43 +16,48 @@ const defaultStats: Stat[] = [
     id: 1,
     number: '500+',
     label: 'Proyectos Completados',
-    description: 'Hemos trabajado en más de 500 proyectos exitosos'
+    description: 'Hemos trabajado en más de 500 proyectos exitosos',
+    iconUrl: estadistica1
   },
   {
     id: 2,
     number: '200+',
     label: 'Clientes Satisfechos',
-    description: 'Más de 200 empresas confían en nosotros'
+    description: 'Más de 200 empresas confían en nosotros',
+    iconUrl: estadistica2
   },
   {
     id: 3,
     number: '15+',
     label: 'Años de Experiencia',
-    description: 'Más de una década en el mercado'
+    description: 'Más de una década en el mercado',
+    iconUrl: estadistica3
   },
   {
     id: 4,
     number: '98%',
     label: 'Tasa de Satisfacción',
-    description: 'Nuestros clientes nos recomiendan'
+    description: 'Nuestros clientes nos recomiendan',
+    iconUrl: estadistica4
   }
 ];
 
-const Statistics: React.FC<StatisticsProps> = ({ stats = defaultStats }) => {
+const Statistics: React.FC<StatisticsProps> = ({ stats }) => {
+  const finalStats = stats && stats.length > 0 ? stats : defaultStats;
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 2;
-  const totalPages = Math.ceil(stats.length / itemsPerPage);
+  const totalPages = Math.ceil(finalStats.length / itemsPerPage);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + itemsPerPage >= stats.length ? 0 : prevIndex + itemsPerPage
+      prevIndex + itemsPerPage >= finalStats.length ? 0 : prevIndex + itemsPerPage
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex - itemsPerPage < 0
-        ? Math.floor(stats.length / itemsPerPage) * itemsPerPage
+        ? Math.floor(finalStats.length / itemsPerPage) * itemsPerPage
         : prevIndex - itemsPerPage
     );
   };
@@ -58,10 +67,10 @@ const Statistics: React.FC<StatisticsProps> = ({ stats = defaultStats }) => {
   };
 
   const currentPage = Math.floor(currentIndex / itemsPerPage);
-  const visibleStats = stats.slice(currentIndex, currentIndex + itemsPerPage);
+  const visibleStats = finalStats.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 mt-16 mb-10 rounded-2xl shadow-2xl">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-12">
@@ -80,7 +89,7 @@ const Statistics: React.FC<StatisticsProps> = ({ stats = defaultStats }) => {
           </button>
 
           {/* Stats Grid */}
-          <div className="space-y-8">
+          <div className="space-y-8 justify-center flex flex-col items-center">
             {visibleStats.map((stat, index) => (
               <StatCard
                 key={stat.id}

@@ -16,11 +16,11 @@ interface StatCardProps {
 const StatCard: React.FC<StatCardProps> = ({ stat, variant = 'right' }) => {
   return (
     <div className={`flex items-center gap-6 p-6 ${
-      variant === 'left' ? 'flex-row' : 'flex-row-reverse'
+      variant === 'left' ? 'flex-row' : 'flex-row-reverse justify-end'
     }`}>
       {/* Icon Circle */}
       <div className="flex-shrink-0">
-        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-black bg-white flex items-center justify-center overflow-hidden">
+        <div className="w-20 h-20 md:w-24 md:h-24 bg-white flex items-center justify-center overflow-hidden">
           {stat.iconUrl ? (
             <img
               src={stat.iconUrl}
@@ -43,19 +43,26 @@ const StatCard: React.FC<StatCardProps> = ({ stat, variant = 'right' }) => {
         </div>
       </div>
 
-      {/* Stat Content */}
-      <div className="flex-1 space-y-3">
-        {/* Number Line (bold/thick) */}
-        <div className="space-y-1">
-          <div className="h-2 bg-black rounded w-2/5"></div>
-        </div>
-
-        {/* Text Lines */}
-        <div className="space-y-2">
-          <div className="h-1 bg-black rounded"></div>
-          <div className="h-1 bg-black rounded"></div>
-          <div className="h-1 bg-black rounded w-4/5"></div>
-        </div>
+      {/* Stat Content - CONTENIDO REAL */}
+      <div className={`flex-shrink-0 ${
+        variant === 'left' ? 'text-left' : 'text-right'
+      }`}>
+        {/* Number - Grande y Bold */}
+        <h3 className="text-4xl md:text-5xl font-bold text-black">
+          {stat.number}
+        </h3>
+        
+        {/* Label - Título */}
+        <p className="text-xl md:text-2xl font-semibold text-black">
+          {stat.label}
+        </p>
+        
+        {/* Description - Texto descriptivo */}
+        {stat.description && (
+          <p className="text-base text-gray-600">
+            {stat.description}
+          </p>
+        )}
       </div>
     </div>
   );
