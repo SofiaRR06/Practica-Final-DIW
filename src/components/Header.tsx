@@ -4,7 +4,7 @@ import Button from './Button';
 
 const Header: React.FC = () => {
   return (
-    <header className="py-12 px-6 mt-33 lg:mx-20 md:mx-0">
+    <header className="py-12 px-6 mt-33 mx-20">
       <div className="mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

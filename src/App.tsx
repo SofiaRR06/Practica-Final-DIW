@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-    <div className='mx-auto px-4 sm:max-w-sm md:max-w-md lg:max-w-4xl'>
+    <div className='mx-20 px-4 '>
     <Navbar />
     <Header />
     <Projects />
