@@ -70,7 +70,7 @@ const Statistics: React.FC<StatisticsProps> = ({ stats }) => {
   const visibleStats = finalStats.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 mt-16 mb-10 rounded-2xl shadow-2xl">
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 mt-16 mb-10 rounded-2xl shadow-2xl max-w-md">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-12">

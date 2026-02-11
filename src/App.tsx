@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-    <div className='mx-20 px-4 '>
+    <div className='md:mx-20 md:px-4 '>
     <Navbar />
     <Header />
     <Projects />

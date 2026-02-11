@@ -56,7 +56,7 @@ const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-dark-blue text-white py-12 px-6 md:px-12 lg:px-24 flex justify-between ">
+    <footer className="bg-dark-blue text-white py-12 px-6 md:px-12 lg:px-24 flex justify-between max-w-md">
       <div className=" mx-auto">
         <div className="flex gap-50 ">
           {/* Left Column - Contact Links */}

@@ -67,7 +67,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({
   const visibleProjects = projects.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 rounded-3xl shadow-2xl">
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-24 rounded-3xl shadow-2x max-w-mdl">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-12">

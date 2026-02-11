@@ -77,7 +77,7 @@ const Navbar = () => {
       <nav className="fixed left-0 right-0 top-4 lg:hidden z-50 mx-4">
         <div className="flex items-center p-2 bg-blue shadow-lg rounded-3xl border-b-4 border-dark-blue">
           {/* Logo */}
-          <div className="w-24 h-24 bg-white rounded-full p-1 shadow-md flex-shrink-0">
+          <div className="w-24 h-24 bg-white rounded-full p-1 shadow-md shrink-0">
             <img src={Logo} alt="Logo" className="w-full h-full object-contain" />
           </div>
 

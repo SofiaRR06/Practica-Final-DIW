@@ -4,7 +4,7 @@ import Scrum from "../assets/metodologia-scrum.jpg";
 
 const Methodologies: React.FC = () => {
   return (
-    <div className="bg-white mx-auto px-4 py-10 mt-20 rounded-2xl shadow-2xl" >
+    <div className="bg-white mx-auto px-4 py-10 mt-20 rounded-2xl shadow-2xl max-w-md" >
       <h2 className="text-5xl font-bold text-center text-blue mb-2">
         Metodologías que usamos
       </h2>
