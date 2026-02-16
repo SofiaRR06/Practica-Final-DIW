@@ -1,21 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: var(--color-light-blue);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 @theme {
   --color-black: #31293c;
   --color-blue: #1f3963;
@@ -24,7 +8,36 @@
   --color-light-blue: #d1d7dc;
   --color-pink: #df6489;
   --color-white: #ffffff;
-  --color-grey:#ABAFB1;
+  --color-grey: #ABAFB1;
+
+  
+  /* VARIABLES MODO OSCURO */
+  --color-dark-bg: #303647;           
+  --color-dark-surface: #1a1f2e;      
+  --color-dark-white: #8C98A6; 
+  --color-dark-card: #9BA4AF;    
+  --color-dark-border: #070D22;     
+}
+
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--color-light-blue);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease;
+}
+
+.dark {
+  background-color: var(--color-dark-bg);
+  color: rgba(255, 255, 255, 0.87);
 }
 
 body {
@@ -34,4 +47,3 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
