@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-// 🔹 Aplicar tema ANTES de renderizar React
 const applyInitialTheme = () => {
   const savedTheme = localStorage.getItem('theme') || 'system';
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -13,7 +12,6 @@ const applyInitialTheme = () => {
   } else if (savedTheme === 'light') {
     document.documentElement.classList.remove('dark');
   } else {
-    // System mode
     document.documentElement.classList.toggle('dark', mediaQuery.matches);
   }
 };

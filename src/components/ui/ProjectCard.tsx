@@ -18,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       className="flex flex-col"
       onClick={() => onClick?.(project)}
     >
-      {/* Image Container */}
+      {/* Imagen */}
       <div className=" bg-light-blue shadow-xl rounded-lg  items-center justify-center overflow-hidden group cursor-pointer ">
         {project.imageUrl ? (
           <img 
@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       </div>
 
       <h2 className="text-3xl font-bold text-black mt-4 text-center">{project.title}</h2>
-      <p className="text-gray-700 mt-2 text-center">{project.description}</p>
+      <p className="text-grey mt-2 text-center">{project.description}</p>
     </div>
   );
 };

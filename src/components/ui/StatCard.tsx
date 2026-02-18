@@ -10,7 +10,7 @@ export interface Stat {
 
 interface StatCardProps {
   stat: Stat;
-  variant?: 'left' | 'right'; // Posición del ícono
+  variant?: 'left' | 'right'; 
 }
 
 const StatCard: React.FC<StatCardProps> = ({ stat, variant = 'right' }) => {
@@ -18,7 +18,6 @@ const StatCard: React.FC<StatCardProps> = ({ stat, variant = 'right' }) => {
     <div className={`dark:bg-dark-card rounded-lg justify-center shadow-lg w-150 h-40 flex items-center gap-6 p-6 ${
       variant === 'left' ? 'flex-row' : 'flex-row-reverse  '
     }`}>
-      {/* Icon Circle */}
       <div className="shrink-0">
         <div className="w-25 h-25 md:w-24 md:h-24flex items-center justify-center overflow-hidden">
           {stat.iconUrl ? (
@@ -43,23 +42,18 @@ const StatCard: React.FC<StatCardProps> = ({ stat, variant = 'right' }) => {
         </div>
       </div>
 
-      {/* Stat Content - CONTENIDO REAL */}
+      
       <div className={`shrink-0 ${
         variant === 'left' ? 'text-left' : 'text-right'
       }`}>
-        {/* Number - Grande y Bold */}
         <h3 className="text-4xl md:text-5xl font-bold text-black">
           {stat.number}
         </h3>
-        
-        {/* Label - Título */}
         <p className="text-xl md:text-2xl font-semibold text-black">
           {stat.label}
         </p>
-        
-        {/* Description - Texto descriptivo */}
         {stat.description && (
-          <p className="text-base text-gray-600">
+          <p className="text-base text-grey">
             {stat.description}
           </p>
         )}

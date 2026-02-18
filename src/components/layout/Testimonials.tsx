@@ -36,22 +36,18 @@ const Testimonials: React.FC<TestimonialsProps> = ({
   return (
     <section className="bg-white py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 my-12 md:my-16 rounded-2xl shadow-2xl w-full max-w-7xl mx-auto dark:bg-dark-white">
       <div className="w-full">
-        {/* Title */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-8 md:mb-12">
           Testimonios
         </h2>
 
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-          
-          {/* Left Column - Testimonials */}
           <div className="lg:col-span-2 space-y-6 ">
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
           </div>
 
-          {/* Right Column - Verification Badge */}
+          {/* Verificacion */}
           <div className="flex justify-center lg:justify-end ">
             <div className="bg-light-blue rounded-2xl p-6 md:p-8 text-center w-full max-w-sm lg:max-w-none dark:bg-dark-card shadow-lg">
               <p className="text-2xl sm:text-3xl font-semibold text-dark-blue mb-4">

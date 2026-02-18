@@ -72,14 +72,14 @@ const Statistics: React.FC<StatisticsProps> = ({ stats }) => {
   return (
     <section className="bg-white dark:bg-dark-white py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 my-12 md:my-16 rounded-2xl shadow-2xl w-full max-w-7xl mx-auto">
       <div className="w-full">
-        {/* Title */}
+      
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black text-center mb-8 md:mb-12">
           Estadísticas
         </h2>
 
-        {/* Carousel Container */}
+        {/* Carrusel */}
         <div className="relative px-8 sm:px-12 md:px-16">
-          {/* Previous Button */}
+          
           <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-8 z-10 bg-light-blue hover:bg-blue hover:text-white text-black rounded-full p-2 transition-colors duration-300 shadow-lg"
@@ -88,7 +88,6 @@ const Statistics: React.FC<StatisticsProps> = ({ stats }) => {
             <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
           </button>
 
-          {/* Stats Grid */}
           <div className="space-y-6 md:space-y-8 flex flex-col items-center w-full">
             {visibleStats.map((stat, index) => (
               <StatCard
@@ -99,7 +98,6 @@ const Statistics: React.FC<StatisticsProps> = ({ stats }) => {
             ))}
           </div>
 
-          {/* Next Button */}
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-8 z-10 bg-light-blue hover:bg-blue hover:text-white text-black rounded-full p-2 transition-colors duration-300 shadow-lg "
@@ -109,7 +107,7 @@ const Statistics: React.FC<StatisticsProps> = ({ stats }) => {
           </button>
         </div>
 
-        {/* Pagination Dots */}
+        {/* Número de páginas */}
         <div className="flex justify-center items-center gap-2 mt-8">
           {Array.from({ length: totalPages }).map((_, index) => (
             <button
